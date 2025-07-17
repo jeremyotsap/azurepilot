@@ -7,6 +7,8 @@
 * Python and Azure CLI or __choco install azure-cli -y__
 * Git bash or __choco install git -y__
 
+NOTE: chocolatey installs **terraform.exe** in C:\ProgramData\chocolatey\lib\terraform\tools
+
 ## Goals
 * TF templates for HA Web Server with VM, LB, Autoscaler, IIS
 * PowerShell and CLI scripts
