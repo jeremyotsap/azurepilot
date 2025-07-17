@@ -9,6 +9,14 @@
 
 NOTE: chocolatey installs **terraform.exe** in C:\ProgramData\chocolatey\lib\terraform\tools
 
+set repo & open in VS code
+main.tf
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+
+
 ## Goals
 * TF templates for HA Web Server with VM, LB, Autoscaler, IIS
 * PowerShell and CLI scripts
