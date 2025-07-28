@@ -24,7 +24,10 @@ terraform destroy
 * Data Factory deployment and pipelines
 
 ## Git Repo
-NOTE: .gitignore should include *.bak and *~ 
+NOTE: **.gitignore** should include *.bak and *~ 
+git config --global user.name "FirstName LastName"
+git config --global user.email "emailname@gmail.com"
+
 
 * mkdir ./tfcaf && cd ./tfcaf
 * touch README.md (can add notes via nano)
@@ -37,34 +40,40 @@ NOTE: .gitignore should include *.bak and *~
 
 **Branch Create & Merge**
 PREBRANCH CHECKPOINT
-* git switch master
+* git switch main
 * git commit -m "PREMERGE SAFETY COMMIT & DIFF"
 
 CREATE BRANCH
+* git branch --all (show branch)
 * git checkout -b MyNewBranch (create and switch to mybranch)
-* git push origin MyNewBranch  
-* git branch (show branch)
+* (add / update files)
 * git add .
 * git commit -m "updates to MyNewBranch"
+
+UPDATE YOUR LOCAL COPY OF MAIN TO ACCOUNT FOR CHANGES PRIOR TO MERGE
+* git checkout main
+* git pull origin main (update MAIN prior to merge)
+
+MERGE BRANCH
+* git branch --all (show branch)
+* git checkout main (check out the target / destination branch)
+* git diff MyNewBranch (use 'q' to exit)
+* git status
+* **git merge MyNewBranch**
+
+OPTIONS FOR CONFLICT RESOLUTION
+git merge MyNewBranch --strategy==theirs
+#make THEIR changes win
+
+git merge MyNewBranch --strategy=ours
+#make OUR changes win
+
 
 PULL REQUEST
 * git push -u origin MyNewBranch
 * navigate GitHub site to approve pull requests
 https://github.com/<usr>/<repo>/pull/new/branch
 
-
-MERGE BRANCH
-* git diff MyNewBranch (use 'q' to exit)
-* git status
-* git checkout main (check out the target / destination branch)
-* git merge MyNewBranch
-
-OPTIONS FOR CONFLICT RESOLUTION
-git merge master --strategy==theirs
-#make THEIR changes win
-
-git merge master --strategy=ours
-#make OUR changes win
 
 UNDO STAGED CHANGES
 * git reset <filename> (ex README.md)
