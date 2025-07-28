@@ -61,12 +61,13 @@ MERGE BRANCH
 * git status
 * **git merge MyNewBranch**
 
-OPTIONS FOR CONFLICT RESOLUTION
+OPTIONS FOR CONFLICT RESOLUTION 
+ 
 git merge MyNewBranch --strategy==theirs
-#make THEIR changes win
+(THEIR changes win)
 
 git merge MyNewBranch --strategy=ours
-#make OUR changes win
+(make OUR changes win)
 
 
 PULL REQUEST
